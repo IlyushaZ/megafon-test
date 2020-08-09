@@ -1,0 +1,13 @@
+language: go
+go:
+  - 1.14.x
+
+services:
+  - docker
+
+before_install:
+  - make build
+  - make build-docker
+
+script:
+  - make smoke-test
