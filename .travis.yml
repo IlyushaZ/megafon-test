@@ -7,7 +7,8 @@ services:
 
 before_install:
   - make build
-  - make build-docker
+  - make run-container
 
 script:
   - make smoke-test
+  - make unit-tests

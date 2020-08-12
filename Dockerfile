@@ -4,7 +4,8 @@ RUN mkdir /app
 ADD . /app
 WORKDIR /app
 
-RUN go build -o /bin/hasher main.go
+RUN go mod download
+RUN go build -o /bin/hasher cmd/hasher/main.go
 
 FROM alpine:latest
 COPY --from=build /bin/hasher /bin/hasher
