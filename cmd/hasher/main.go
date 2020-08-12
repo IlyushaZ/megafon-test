@@ -12,7 +12,7 @@ func main() {
 
 	s := http.Server{
 		Handler: mux,
-		Addr:    ":8087",
+		Addr:    ":80",
 	}
 
 	log.Println("starting server on port 80")
